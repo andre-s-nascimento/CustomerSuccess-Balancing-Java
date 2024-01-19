@@ -19,6 +19,7 @@ public class CustomerSuccessBalancing {
 
   public int run() {
     Map<Integer, Integer> customerSuccessCustomersMap = new HashMap<>();
+    int maxValue = -1;
 
     customerSuccess.removeIf(obj -> customerSuccessAway.contains(obj.getId()));
     customerSuccess.sort(Comparator.comparing(CustomerSuccess::getScore));
@@ -34,7 +35,6 @@ public class CustomerSuccessBalancing {
         }
       }
     }
-    int maxValue = -1;
 
     if (!customerSuccessCustomersMap.isEmpty()) {
       maxValue = Collections.max(customerSuccessCustomersMap.values());
