@@ -8,7 +8,7 @@
 
 No terminal, execute os comandos:
 ```
-cd java
+cd .\CustomerSuccess-Balancing-Java\
 ./mvnw test
 ```
 
